@@ -1,0 +1,32 @@
+{
+    "name": "yuta-yamamoto.net",
+    "version": "1.0.0",
+    "description": "My Profile Suite!",
+    "main": "index.js",
+    "repository": "https://github.com/yt-ymmt/yuta-yamamoto.net.git",
+    "author": "Yuta_Yamamoto",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint --fix ./pages/**/*.js && eslint --fix *.js",
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "^6.1.1",
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "react-redux": "^5.0.7",
+        "redux": "^4.0.0",
+        "styled-components": "^3.3.3"
+    },
+    "devDependencies": {
+        "eslint": "^5.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-prettier": "^2.6.2",
+        "eslint-plugin-react": "^7.10.0",
+        "prettier": "^1.13.7",
+        "webpack": "^4.16.0",
+        "webpack-cli": "^3.0.8"
+    }
+}
