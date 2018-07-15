@@ -8,6 +8,7 @@
     "license": "MIT",
     "scripts": {
         "lint": "eslint --fix ./pages/**/*.js && eslint --fix *.js",
+        "storybook": "start-storybook -p 6006",
         "dev": "next",
         "build": "next build",
         "start": "next start"
