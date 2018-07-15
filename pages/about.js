@@ -3,14 +3,14 @@ import Link from 'next/link';
 import Heading from '../src/components/atoms/Heading';
 import { StaticPage } from './_page';
 
-class IndexPage extends StaticPage {
+class AboutPage extends StaticPage {
     render() {
         return (
             <Provider store={this.store}>
                 <div>
-                    <Heading>TOP</Heading>
-                    <Link prefetch={true} href="./about">
-                        <a>About</a>
+                    <Heading>About</Heading>
+                    <Link prefetch={true} href="./index">
+                        <a>Top</a>
                     </Link>
                 </div>
             </Provider>
@@ -18,4 +18,4 @@ class IndexPage extends StaticPage {
     }
 }
 
-export default IndexPage;
+export default AboutPage;
