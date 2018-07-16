@@ -9,7 +9,7 @@ class IndexPage extends StaticPage {
             <Provider store={this.store}>
                 <div>
                     <Heading>TOP</Heading>
-                    <Link prefetch={true} href="./about">
+                    <Link prefetch={true} href="/about">
                         <a>About</a>
                     </Link>
                 </div>
