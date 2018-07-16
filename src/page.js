@@ -1,5 +1,5 @@
 import React from 'react';
-import { getStore } from '../src/store';
+import { getStore } from './store';
 
 export class StaticPage extends React.Component {
     static async getInitialProps({ req }) {

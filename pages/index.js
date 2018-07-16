@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import Link from 'next/link';
 import Heading from '../src/components/atoms/Heading';
-import { StaticPage } from './_page';
+import { StaticPage } from '../src/page';
 
 class IndexPage extends StaticPage {
     render() {
