@@ -7,8 +7,8 @@ const StyledImg = styled.img`
     vertical-align: bottom;
 `;
 
-const Img = ({ src, width = 'auto', height = 'auto', ...props }) => (
-    <StyledImg src={src} width={width} height={height} {...props} />
+const Img = ({ src, width = 'auto', height = 'auto', alt = '', ...props }) => (
+    <StyledImg src={src} width={width} height={height} alt={alt} {...props} />
 );
 
 export default Img;
