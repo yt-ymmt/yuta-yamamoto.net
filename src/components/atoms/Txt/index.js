@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 
 const StyledTxt = styled.p`
     margin: 0;
@@ -9,11 +9,11 @@ const StyledTxt = styled.p`
 `;
 
 const StyledInfo = StyledTxt.extend`
-    color: cadetblue;
+    color: ${props => props.theme.color_blue};
 `;
 
 const StyledWarning = StyledTxt.extend`
-    color: tomato;
+    color: ${props => props.theme.color_red};
 `;
 
 const textFactory = role => ({ size = 'm', ...props }) => {
@@ -42,6 +42,6 @@ const textFactory = role => ({ size = 'm', ...props }) => {
 
 const Index = textFactory('default');
 
-export default Index;
-export const InfoTxt = textFactory('info');
-export const WarningTxt = textFactory('warning');
+export default withTheme(Index);
+export const InfoTxt = withTheme(textFactory('info'));
+export const WarningTxt = withTheme(textFactory('warning'));

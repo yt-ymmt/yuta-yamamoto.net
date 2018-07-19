@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { containPresenter } from '../../utils/Hoc';
 
 const Head = styled.h1`
@@ -59,4 +59,4 @@ export const HeadingContainer = ({ presenter, level = 1, ...props }) => {
 };
 
 const Index = containPresenter(HeadingContainer, HeadingPresenter);
-export default Index;
+export default withTheme(Index);

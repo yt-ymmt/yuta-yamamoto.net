@@ -1,18 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import Link from 'next/link';
 
 const StyledAnchor = styled.a`
     margin: 0;
     padding: 0;
+    color: ${props => props.theme.color_link};
 `;
 
 const Anchor = ({ children, href, ...props }) => {
     return (
-        <Link href={href}>
+        <Link href={href} passHref>
             <StyledAnchor {...props}>{children}</StyledAnchor>
         </Link>
     );
 };
 
-export default Anchor;
+export default withTheme(Anchor);

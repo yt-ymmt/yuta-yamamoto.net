@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 
 const StyledImg = styled.img`
     margin: 0;
@@ -11,4 +11,4 @@ const Img = ({ src, width = 'auto', height = 'auto', alt = '', ...props }) => (
     <StyledImg src={src} width={width} height={height} alt={alt} {...props} />
 );
 
-export default Img;
+export default withTheme(Img);
