@@ -1,10 +1,10 @@
 import React from 'react';
 import { withTheme } from 'styled-components';
-import Heading from '../atoms/Heading';
-import Img from '../atoms/Img';
-import Anchor from '../atoms/Anchor';
+import Heading from '../../atoms/Heading/index';
+import Img from '../../atoms/Img/index';
+import Anchor from '../../atoms/Anchor/index';
 
-class IndexTemplate extends React.Component {
+class Index extends React.Component {
     render() {
         return (
             <div>
@@ -16,4 +16,4 @@ class IndexTemplate extends React.Component {
     }
 }
 
-export default withTheme(IndexTemplate);
+export default withTheme(Index);

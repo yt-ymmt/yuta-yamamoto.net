@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../src/components/theme';
 import { StaticPage } from '../src/page';
 
-import IndexTemplate from '../src/components/templates/indexTemplate';
+import IndexTemplate from '../src/components/templates/IndexTemplate/index';
 
 class IndexPage extends StaticPage {
     render() {
