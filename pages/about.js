@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux';
-import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import theme from '../src/components/theme';
 import Heading from '../src/components/atoms/Heading';
+import Anchor from '../src/components/atoms/Anchor';
 import { StaticPage } from '../src/page';
 
 class AboutPage extends StaticPage {
@@ -12,9 +12,7 @@ class AboutPage extends StaticPage {
                 <ThemeProvider theme={theme}>
                     <div>
                         <Heading>About</Heading>
-                        <Link prefetch={true} href="/">
-                            <a>Top</a>
-                        </Link>
+                        <Anchor href="/">Top</Anchor>
                     </div>
                 </ThemeProvider>
             </Provider>
