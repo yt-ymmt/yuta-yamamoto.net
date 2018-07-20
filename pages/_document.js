@@ -2,7 +2,9 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class AppDocument extends Document {
-    static getInitialProps({ renderPage }) {
+    static async getInitialProps({ renderPage }) {
+        console.log(renderPage);
+
         const sheet = new ServerStyleSheet();
         const page = renderPage(App => props =>
             sheet.collectStyles(<App {...props} />)
