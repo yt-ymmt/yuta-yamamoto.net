@@ -3,8 +3,6 @@ import { ServerStyleSheet } from 'styled-components';
 
 class AppDocument extends Document {
     static async getInitialProps({ renderPage }) {
-        console.log(renderPage);
-
         const sheet = new ServerStyleSheet();
         const page = renderPage(App => props =>
             sheet.collectStyles(<App {...props} />)
@@ -16,14 +14,14 @@ class AppDocument extends Document {
     render() {
         return (
             <html>
-                <Head>
-                    <title>MyPage</title>
-                    {this.props.styleTags}
-                </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
+            <Head>
+                <title>MyPage</title>
+                {this.props.styleTags}
+            </Head>
+            <body>
+            <Main />
+            <NextScript />
+            </body>
             </html>
         );
     }
