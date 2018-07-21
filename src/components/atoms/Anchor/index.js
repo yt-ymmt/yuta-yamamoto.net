@@ -10,7 +10,7 @@ const StyledAnchor = styled.a`
 
 const Anchor = ({ children, href, ...props }) => {
     return (
-        <Link href={href} passHref>
+        <Link href={href} prefetch passHref>
             <StyledAnchor {...props}>{children}</StyledAnchor>
         </Link>
     );
