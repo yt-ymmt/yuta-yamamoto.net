@@ -17,9 +17,13 @@ const Particle = ({ ...props }) => (
             resize: true
         }}
         style={{
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#2E324F'
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: '#2E324F',
+            zIndex: '-1'
         }}
         {...props}
     />
