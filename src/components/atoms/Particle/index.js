@@ -6,8 +6,9 @@ const Particle = ({ ...props }) => (
         params={{
             particles: {
                 line_linked: {
+                    enable: false,
                     shadow: {
-                        enable: true,
+                        enable: false,
                         color: '#3CA9D1',
                         blur: 5
                     }

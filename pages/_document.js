@@ -14,14 +14,14 @@ class AppDocument extends Document {
     render() {
         return (
             <html>
-            <Head>
-                <title>MyPage</title>
-                {this.props.styleTags}
-            </Head>
-            <body>
-            <Main />
-            <NextScript />
-            </body>
+                <Head>
+                    <title>MyPage</title>
+                    {this.props.styleTags}
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
             </html>
         );
     }
