@@ -6,6 +6,11 @@ const StyledAnchor = styled.a`
     margin: 0;
     padding: 0;
     color: ${props => props.theme.color_link};
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.75;
+    }
 `;
 
 const Anchor = ({ children, href, ...props }) => {
