@@ -5,6 +5,9 @@ const StyledImg = styled.img`
     margin: 0;
     padding: 0;
     vertical-align: bottom;
+    border-radius: ${props => {
+        return props.circle ? '50%' : '0';
+    }};
 `;
 
 const Img = ({ src, width = 'auto', height = 'auto', alt = '', ...props }) => (

@@ -6,7 +6,7 @@ import GlobalNavi from '../../parts/GlobalNavi';
 
 const naviItems = [
     {
-        title: 'TOP',
+        title: 'Top',
         href: '/'
     },
     {

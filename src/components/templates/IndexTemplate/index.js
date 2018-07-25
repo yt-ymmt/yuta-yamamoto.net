@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
+import { fadeInDown, fadeIn } from '../../utils/Animations';
+
 import Head from 'next/head';
 import Logo from '../../atoms/Logo';
 import GlobalNavi from '../../parts/GlobalNavi';
@@ -14,14 +16,34 @@ const StyledHeroItems = styled.section`
     text-align: center;
 `;
 
+const StyledImg = styled(Img)`
+    margin-bottom: ${props => props.theme.margin_xl};
+    animation: ${fadeInDown} 2.5s ease 0.2s both;
+    filter: brightness(1.3);
+    opacity: 0;
+`;
+
+const StyledLogo = styled(Logo)`
+    animation: ${fadeInDown} 2.5s ease 0s both;
+    opacity: 0;
+`;
+
+const StyledGlobalNavi = styled(GlobalNavi)`
+    animation: ${fadeIn} 2s ease 1.5s both;
+`;
+
 const naviItems = [
     {
-        title: 'TOP',
+        title: 'Top',
         href: '/'
     },
     {
         title: 'About',
         href: '/about'
+    },
+    {
+        title: 'Top',
+        href: '/'
     }
 ];
 
@@ -33,9 +55,14 @@ class Index extends React.Component {
                     <title>top</title>
                 </Head>
                 <StyledHeroItems>
-                    <Logo>Yuta Yamamoto</Logo>
-                    <GlobalNavi naviItems={naviItems} />
-                    <Img src="/static/thumb.jpg" width="200" height="200" />
+                    <StyledImg
+                        circle={true}
+                        src="/static/thumb.jpg"
+                        width="200"
+                        height="200"
+                    />
+                    <StyledLogo>Yuta Yamamoto</StyledLogo>
+                    <StyledGlobalNavi naviItems={naviItems} />
                 </StyledHeroItems>
                 <Particle />
             </div>

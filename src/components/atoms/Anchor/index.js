@@ -9,7 +9,7 @@ const StyledAnchor = styled.a`
     text-decoration: none;
     transition: all 0.3s ease;
     &:hover {
-        opacity: 0.75;
+    text-decoration: underline;
     }
 `;
 

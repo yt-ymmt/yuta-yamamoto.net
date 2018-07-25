@@ -22,7 +22,8 @@ const Particle = ({ ...props }) => (
             left: 0,
             width: '100vw',
             height: '100vh',
-            backgroundColor: '#2E324F',
+            backgroundImage:
+                'radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% )',
             zIndex: '-1'
         }}
         {...props}
