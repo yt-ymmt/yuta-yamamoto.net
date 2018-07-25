@@ -6,7 +6,6 @@ export class StaticPage extends React.Component {
         const isServer = !!req;
         const store = getStore(undefined, isServer);
         const state = store.getState();
-
         return { state, isServer };
     }
 

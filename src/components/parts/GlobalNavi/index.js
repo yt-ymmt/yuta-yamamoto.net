@@ -17,13 +17,15 @@ const StyledGlobalNaviItem = styled.li`
 `;
 
 const GlobalNavi = ({ naviItems, ...props }) => (
-    <StyledGlobalNavi {...props}>
-        {naviItems.map((naviItem, index) => (
-            <StyledGlobalNaviItem key={index}>
-                <Anchor href={naviItem.href}>{naviItem.title}</Anchor>
-            </StyledGlobalNaviItem>
-        ))}
-    </StyledGlobalNavi>
+    <nav>
+        <StyledGlobalNavi {...props}>
+            {naviItems.map((naviItem, index) => (
+                <StyledGlobalNaviItem key={index}>
+                    <Anchor href={naviItem.href}>{naviItem.title}</Anchor>
+                </StyledGlobalNaviItem>
+            ))}
+        </StyledGlobalNavi>
+    </nav>
 );
 
 export default withTheme(GlobalNavi);
