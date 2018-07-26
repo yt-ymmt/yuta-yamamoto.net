@@ -8,8 +8,9 @@ const StyledAnchor = styled.a`
     color: ${props => props.theme.color_link};
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: ${props => props.theme.fz_m};
     &:hover {
-    text-decoration: underline;
+        text-decoration: underline;
     }
 `;
 

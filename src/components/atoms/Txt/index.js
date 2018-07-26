@@ -20,13 +20,13 @@ const textFactory = role => ({ size = 'm', ...props }) => {
     const fontSize = (() => {
         switch (size) {
             case 'l':
-                return 16;
+                return 21;
             case 'm':
-                return 14;
+                return 15;
             case 's':
-                return 12;
+                return 10;
             default:
-                return 12;
+                return 15;
         }
     })();
 

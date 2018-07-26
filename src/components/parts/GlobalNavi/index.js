@@ -18,7 +18,6 @@ const StyledGlobalNaviItem = styled.li`
 
 const StyledAnchor = styled(Anchor)`
     color: ${props => props.theme.color_white};
-    font-size: 1.3rem;
 `;
 
 const GlobalNavi = ({ naviItems, ...props }) => (

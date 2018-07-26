@@ -1,5 +1,4 @@
 import React from 'react';
-import { withTheme } from 'styled-components';
 import FA from 'react-fontawesome';
 
 const Icon = ({ name, size, spin, ...props }) => {
@@ -12,4 +11,4 @@ const Icon = ({ name, size, spin, ...props }) => {
     return IconComponent;
 };
 
-export default withTheme(Icon);
+export default Icon;
