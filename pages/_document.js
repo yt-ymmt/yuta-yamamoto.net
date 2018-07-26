@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { injectGlobal, ServerStyleSheet } from 'styled-components';
 
+// Icon font
+
 // Global Style Sheets
 injectGlobal`
 html, body {
