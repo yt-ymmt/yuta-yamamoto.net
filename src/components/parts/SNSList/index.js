@@ -9,7 +9,8 @@ const StyledUl = styled.ul`
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: ${props => props.theme.margin_l} 0 0 0;
+    border-top: 1px dashed ${props => props.theme.color_white};
 `;
 
 const StyledLi = styled.li`
@@ -33,7 +34,7 @@ const SNSList = ({ snsItems, ...props }) => (
     <StyledUl {...props}>
         {snsItems.map((snsItem, index) => (
             <StyledLi key={index}>
-                <Txt size='l'>
+                <Txt size="m">
                     <StyledAnchor href={snsItem.url} target="_blank">
                         <StyledIcon
                             category={snsItem.iconCategory}

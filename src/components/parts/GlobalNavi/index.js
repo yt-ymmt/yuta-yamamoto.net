@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import Anchor from '../../atoms/Anchor';
+import Txt from '../../atoms/Txt';
 
 const StyledGlobalNavi = styled.ul`
     display: flex;
@@ -25,9 +26,11 @@ const GlobalNavi = ({ naviItems, ...props }) => (
         <StyledGlobalNavi {...props}>
             {naviItems.map((naviItem, index) => (
                 <StyledGlobalNaviItem key={index}>
-                    <StyledAnchor href={naviItem.href}>
-                        {naviItem.title}
-                    </StyledAnchor>
+                    <Txt size="l">
+                        <StyledAnchor href={naviItem.href}>
+                            {naviItem.title}
+                        </StyledAnchor>
+                    </Txt>
                 </StyledGlobalNaviItem>
             ))}
         </StyledGlobalNavi>

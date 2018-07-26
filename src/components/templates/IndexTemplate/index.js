@@ -11,10 +11,10 @@ import Img from '../../atoms/Img/index';
 import Particle from '../../atoms/Particle';
 
 const StyledHeroItems = styled.section`
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    padding: 60px 80px;
+    padding: 60px 70px;
     background: ${props => props.theme.color_black};
     transform: translate3d(-50%, -50%, 0);
     text-align: center;
@@ -84,10 +84,6 @@ const naviItems = [
     {
         title: 'ABOUT',
         href: '/about'
-    },
-    {
-        title: 'TOP',
-        href: '/'
     }
 ];
 
@@ -106,9 +102,9 @@ class Index extends React.Component {
                         height="200"
                     />
                     <StyledLogo>Yuta Yamamoto</StyledLogo>
-                    <StyledTxt size="m">Frontend Developer</StyledTxt>
+                    <StyledTxt size="m">"I am Frontend Developer."</StyledTxt>
+                    <StyledGlobalNavi naviItems={naviItems} />
                     <StyledSNSList snsItems={snsItems} />
-                    {/*<StyledGlobalNavi naviItems={naviItems} />*/}
                 </StyledHeroItems>
                 <Particle />
             </div>
