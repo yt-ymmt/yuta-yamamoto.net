@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import Icon from '../../atoms/Icon';
+import Txt from '../../atoms/Txt';
+import Anchor from '../../atoms/Anchor';
 
 const StyledUl = styled.ul`
     display: flex;
@@ -16,13 +18,32 @@ const StyledLi = styled.li`
     list-style: none;
 `;
 
+const StyledAnchor = styled(Anchor)`
+    display: flex;
+    align-items: center;
+    color: ${props => props.theme.color_white};
+`;
+
+const StyledIcon = styled(Icon)`
+    max-width: 30px;
+    margin-right: ${props => props.theme.margin_s};
+`;
+
 const SNSList = ({ snsItems, ...props }) => (
     <StyledUl {...props}>
         {snsItems.map((snsItem, index) => (
             <StyledLi key={index}>
-                <a href={snsItem.url} target="_blank">
-                    <Icon name={snsItem.icon} size="1x" spin={false} />
-                </a>
+                <Txt size='l'>
+                    <StyledAnchor href={snsItem.url} target="_blank">
+                        <StyledIcon
+                            category={snsItem.iconCategory}
+                            name={snsItem.iconName}
+                            size="1x"
+                            fixedWidth
+                        />
+                        {snsItem.name}
+                    </StyledAnchor>
+                </Txt>
             </StyledLi>
         ))}
     </StyledUl>

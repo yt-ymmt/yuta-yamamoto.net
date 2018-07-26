@@ -5,6 +5,7 @@ import { fadeInDown, fadeIn } from '../../utils/Animations';
 import Head from 'next/head';
 import Logo from '../../atoms/Logo';
 import Txt from '../../atoms/Txt';
+import SNSList from '../../parts/SNSList';
 import GlobalNavi from '../../parts/GlobalNavi';
 import Img from '../../atoms/Img/index';
 import Particle from '../../atoms/Particle';
@@ -13,7 +14,7 @@ const StyledHeroItems = styled.section`
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: ${props => props.theme.margin_xl} 60px;
+    padding: 60px 80px;
     background: ${props => props.theme.color_black};
     transform: translate3d(-50%, -50%, 0);
     text-align: center;
@@ -21,7 +22,7 @@ const StyledHeroItems = styled.section`
 
 const StyledImg = styled(Img)`
     margin-bottom: ${props => props.theme.margin_l};
-    animation: ${fadeInDown} 2.5s ease 0.7s both;
+    animation: ${fadeIn} 3s ease 1.5s both;
     filter: brightness(1.2);
     opacity: 0;
 `;
@@ -39,9 +40,41 @@ const StyledTxt = styled(Txt)`
     opacity: 0;
 `;
 
+const StyledSNSList = styled(SNSList)`
+    animation: ${fadeIn} 3s ease 2s both;
+`;
+
 const StyledGlobalNavi = styled(GlobalNavi)`
     animation: ${fadeIn} 2s ease 1.5s both;
 `;
+
+const snsItems = [
+    {
+        url: 'https://twitter.com/YtYmmt',
+        iconCategory: 'fab',
+        iconName: 'twitter',
+        name: 'Twitter'
+    },
+    {
+        url: 'https://note.mu/ytymmt',
+        iconCategory: 'fas',
+        iconName: 'file',
+        name: 'note'
+    },
+    {
+        url: 'https://github.com/yt-ymmt',
+        iconCategory: 'fab',
+        iconName: 'github',
+        name: 'Github'
+    },
+    {
+        url: 'http://memolu.hatenablog.com/',
+        iconCategory: 'fas',
+        iconName: 'pencil-alt',
+        name: 'Hatena Blog'
+    }
+];
+
 
 const naviItems = [
     {
@@ -73,8 +106,9 @@ class Index extends React.Component {
                         height="200"
                     />
                     <StyledLogo>Yuta Yamamoto</StyledLogo>
-                    <StyledTxt size="l">I am Developper.</StyledTxt>
-                    <StyledGlobalNavi naviItems={naviItems} />
+                    <StyledTxt size="m">Frontend Developer</StyledTxt>
+                    <StyledSNSList snsItems={snsItems} />
+                    {/*<StyledGlobalNavi naviItems={naviItems} />*/}
                 </StyledHeroItems>
                 <Particle />
             </div>
