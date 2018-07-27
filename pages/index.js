@@ -1,20 +1,19 @@
-import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
-import theme from '../src/components/theme';
-import { StaticPage } from '../src/page';
-
+import React from 'react';
+import { connect } from 'react-redux';
 import IndexTemplate from '../src/components/templates/IndexTemplate';
 
-class IndexPage extends StaticPage {
+function mapStateToProps(state) {
+    return state;
+}
+
+function mapDispatchToProps(dispatch) {
+    return {};
+}
+
+class IndexPage extends React.Component {
     render() {
-        return (
-            <Provider store={this.store}>
-                <ThemeProvider theme={theme}>
-                    <IndexTemplate />
-                </ThemeProvider>
-            </Provider>
-        );
+        return <IndexTemplate />;
     }
 }
 
-export default IndexPage;
+export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);

@@ -1,20 +1,19 @@
-import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
-import theme from '../src/components/theme';
-import { StaticPage } from '../src/page';
-
+import React from 'react';
+import { connect } from 'react-redux';
 import AboutTemplate from '../src/components/templates/AboutTemplate/index';
+
+function mapStateToProps(state) {
+    return state;
+}
+
+function mapDispatchToProps(dispatch) {
+    return {};
+}
 
 class AboutPage extends StaticPage {
     render() {
-        return (
-            <Provider store={this.store}>
-                <ThemeProvider theme={theme}>
-                    <AboutTemplate />
-                </ThemeProvider>
-            </Provider>
-        );
+        return <AboutTemplate />;
     }
 }
 
-export default AboutPage;
+export default connect(mapStateToProps, mapDispatchToProps)(AboutPage);
