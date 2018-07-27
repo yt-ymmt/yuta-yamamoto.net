@@ -10,7 +10,7 @@ function mapDispatchToProps(dispatch) {
     return {};
 }
 
-class AboutPage extends StaticPage {
+class AboutPage extends React.Component {
     render() {
         return <AboutTemplate />;
     }
