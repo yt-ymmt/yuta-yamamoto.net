@@ -8,6 +8,7 @@ const StyledUl = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: ${props => props.theme.margin_l} 0 0 0;
     border-top: 1px dashed ${props => props.theme.color_white};

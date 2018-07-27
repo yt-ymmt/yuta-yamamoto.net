@@ -3,22 +3,13 @@ import styled, { withTheme } from 'styled-components';
 import { fadeInDown, fadeIn } from '../../utils/Animations';
 
 import Head from 'next/head';
+import ContentBox from '../../atoms/ContentBox';
 import Logo from '../../atoms/Logo';
 import Txt from '../../atoms/Txt';
 import SNSList from '../../parts/SNSList';
 import GlobalNavi from '../../parts/GlobalNavi';
 import Img from '../../atoms/Img/index';
 import Particle from '../../atoms/Particle';
-
-const StyledHeroItems = styled.section`
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    padding: 60px 70px;
-    background: ${props => props.theme.color_black};
-    transform: translate3d(-50%, -50%, 0);
-    text-align: center;
-`;
 
 const StyledImg = styled(Img)`
     margin-bottom: ${props => props.theme.margin_l};
@@ -75,7 +66,6 @@ const snsItems = [
     }
 ];
 
-
 const naviItems = [
     {
         title: 'TOP',
@@ -94,7 +84,7 @@ class Index extends React.Component {
                 <Head>
                     <title>top</title>
                 </Head>
-                <StyledHeroItems>
+                <ContentBox>
                     <StyledImg
                         circle={true}
                         src="/static/thumb.jpg"
@@ -105,7 +95,7 @@ class Index extends React.Component {
                     <StyledTxt size="m">"I am Frontend Developer."</StyledTxt>
                     <StyledGlobalNavi naviItems={naviItems} />
                     <StyledSNSList snsItems={snsItems} />
-                </StyledHeroItems>
+                </ContentBox>
                 <Particle />
             </div>
         );

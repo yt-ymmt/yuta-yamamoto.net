@@ -9,8 +9,8 @@ const Particle = ({ ...props }) => (
                     enable: false,
                     shadow: {
                         enable: false,
-                        color: '#3CA9D1',
-                        blur: 5
+                        color: '#8ECBD1',
+                        blur: 3
                     }
                 }
             },

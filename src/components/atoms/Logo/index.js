@@ -8,6 +8,7 @@ const StyledLogo = styled.h1`
     font-size: 42px;
     font-weight: bold;
     text-align: center;
+    word-break: break-word;
 `;
 
 const Logo = ({ ...props }) => <StyledLogo {...props} />;
