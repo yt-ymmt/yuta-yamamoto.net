@@ -1,6 +1,7 @@
 import App, { Container } from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';
+import withReduxStore from '../src/withReduxStore';
 import { ThemeProvider } from 'styled-components';
 import theme from '../src/components/theme';
 
@@ -19,4 +20,4 @@ class RootApp extends App {
     }
 }
 
-export default RootApp;
+export default withReduxStore(RootApp);
