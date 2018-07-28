@@ -35,3 +35,18 @@ export const naviItems = [
         href: '/about'
     }
 ];
+
+export const profileItems = [
+    {
+        term: 'Name',
+        description: 'Yuta Yamamoto'
+    },
+    {
+        term: 'Birthday',
+        description: 'March, 12th, 1985'
+    },
+    {
+        term: 'Location',
+        description: 'Tokyo, Japan'
+    }
+];
