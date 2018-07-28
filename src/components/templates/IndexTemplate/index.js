@@ -1,15 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import styled, { withTheme } from 'styled-components';
 import { fadeInDown, fadeIn } from '../../utils/Animations';
 
-import Head from 'next/head';
 import ContentBox from '../../atoms/ContentBox';
 import Logo from '../../atoms/Logo';
 import Txt from '../../atoms/Txt';
 import SNSList from '../../parts/SNSList';
 import GlobalNavi from '../../parts/GlobalNavi';
 import Img from '../../atoms/Img/index';
-import Particle from '../../atoms/Particle';
 
 const StyledImg = styled(Img)`
     margin-bottom: ${props => props.theme.margin_l};
@@ -58,7 +57,6 @@ class Index extends React.Component {
                     <StyledGlobalNavi naviItems={this.props.naviItems} />
                     <StyledSNSList snsItems={this.props.snsItems} />
                 </ContentBox>
-                <Particle />
             </div>
         );
     }

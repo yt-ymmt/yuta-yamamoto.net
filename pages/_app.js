@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import withReduxStore from '../src/withReduxStore';
 import { ThemeProvider } from 'styled-components';
 import theme from '../src/components/theme';
+import Particle from '../src/components/atoms/Particle';
 
 class RootApp extends App {
     render() {
@@ -15,6 +16,7 @@ class RootApp extends App {
                         <Component {...pageProps} />
                     </ThemeProvider>
                 </Provider>
+                <Particle />
             </Container>
         );
     }

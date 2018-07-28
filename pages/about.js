@@ -4,7 +4,8 @@ import AboutTemplate from '../src/components/templates/AboutTemplate/index';
 
 function mapStateToProps(state) {
     return {
-        naviItems: state.naviItems
+        naviItems: state.naviItems,
+        profileItems: state.profileItems
     };
 }
 
@@ -14,7 +15,12 @@ function mapDispatchToProps(dispatch) {
 
 class AboutPage extends React.Component {
     render() {
-        return <AboutTemplate naviItems={this.props.naviItems} />;
+        return (
+            <AboutTemplate
+                naviItems={this.props.naviItems}
+                profileItems={this.props.profileItems}
+            />
+        );
     }
 }
 

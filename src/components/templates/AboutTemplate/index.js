@@ -4,9 +4,13 @@ import styled, { withTheme } from 'styled-components';
 
 import Heading from '../../atoms/Heading';
 import ContentBox from '../../atoms/ContentBox';
-import Txt from '../../atoms/Txt';
 import GlobalNavi from '../../parts/GlobalNavi';
-import Particle from '../../atoms/Particle';
+import ProfileOverview from '../../parts/ProfileOverview';
+
+const StyledHeading = styled(Heading)`
+    margin-bottom: ${props => props.theme.margin_xl};
+    color: ${props => props.theme.color_white};
+`;
 
 class Index extends React.Component {
     render() {
@@ -16,13 +20,10 @@ class Index extends React.Component {
                     <title>about | Yuta Yamamoto</title>
                 </Head>
                 <ContentBox>
-                    <Heading>About</Heading>
+                    <StyledHeading>About</StyledHeading>
+                    <ProfileOverview profileItems={this.props.profileItems} />
                     <GlobalNavi naviItems={this.props.naviItems} />
-                    <Txt>
-                        hogehoge
-                    </Txt>
                 </ContentBox>
-                <Particle />
             </div>
         );
     }
