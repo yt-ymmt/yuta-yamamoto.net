@@ -39,44 +39,6 @@ const StyledGlobalNavi = styled(GlobalNavi)`
     animation: ${fadeIn} 2s ease 1.5s both;
 `;
 
-const snsItems = [
-    {
-        url: 'https://twitter.com/YtYmmt',
-        iconCategory: 'fab',
-        iconName: 'twitter',
-        name: 'Twitter'
-    },
-    {
-        url: 'https://note.mu/ytymmt',
-        iconCategory: 'fas',
-        iconName: 'file',
-        name: 'note'
-    },
-    {
-        url: 'https://github.com/yt-ymmt',
-        iconCategory: 'fab',
-        iconName: 'github',
-        name: 'Github'
-    },
-    {
-        url: 'http://memolu.hatenablog.com/',
-        iconCategory: 'fas',
-        iconName: 'pencil-alt',
-        name: 'Hatena Blog'
-    }
-];
-
-const naviItems = [
-    {
-        title: 'TOP',
-        href: '/'
-    },
-    {
-        title: 'ABOUT',
-        href: '/about'
-    }
-];
-
 class Index extends React.Component {
     render() {
         return (
@@ -93,8 +55,8 @@ class Index extends React.Component {
                     />
                     <StyledLogo>Yuta Yamamoto</StyledLogo>
                     <StyledTxt size="m">"I am Frontend Developer."</StyledTxt>
-                    <StyledGlobalNavi naviItems={naviItems} />
-                    <StyledSNSList snsItems={snsItems} />
+                    <StyledGlobalNavi naviItems={this.props.naviItems} />
+                    <StyledSNSList snsItems={this.props.snsItems} />
                 </ContentBox>
                 <Particle />
             </div>
