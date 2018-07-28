@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import IndexTemplate from '../src/components/templates/IndexTemplate';
 
 function mapStateToProps(state) {
-    return state;
+    return {
+        naviItems: state.naviItems,
+        snsItems: state.snsItems
+    };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -12,7 +15,12 @@ function mapDispatchToProps(dispatch) {
 
 class IndexPage extends React.Component {
     render() {
-        return <IndexTemplate />;
+        return (
+            <IndexTemplate
+                naviItems={this.props.naviItems}
+                snsItems={this.props.snsItems}
+            />
+        );
     }
 }
 
