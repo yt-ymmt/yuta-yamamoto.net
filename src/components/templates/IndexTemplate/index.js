@@ -44,7 +44,7 @@ class Index extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>top</title>
+                    <title>Yuta Yamamoto</title>
                 </Head>
                 <ContentBox>
                     <StyledImg

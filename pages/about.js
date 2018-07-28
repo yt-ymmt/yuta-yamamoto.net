@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import AboutTemplate from '../src/components/templates/AboutTemplate/index';
 
 function mapStateToProps(state) {
-    return state;
+    return {
+        naviItems: state.naviItems
+    };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -12,7 +14,7 @@ function mapDispatchToProps(dispatch) {
 
 class AboutPage extends React.Component {
     render() {
-        return <AboutTemplate />;
+        return <AboutTemplate naviItems={this.props.naviItems} />;
     }
 }
 
