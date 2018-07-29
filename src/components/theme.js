@@ -9,8 +9,8 @@ const theme = {
     color_link: '',
     color_red: 'tomato',
     color_blue: 'cadetblue',
-    fz_s: '10px',
-    fz_m: '15px',
+    fz_s: '12px',
+    fz_m: '16px',
     fz_l: '21px'
 };
 

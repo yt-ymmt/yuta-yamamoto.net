@@ -6,6 +6,7 @@ injectGlobal`
 html, body {
     margin: 0;
     padding: 0;
+    font-size: ${props => props.theme.fz_m};
     font-family: "YakuHanJP", "NotoSansCJKjp", "NotoSansCJKsc", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 * {
@@ -25,14 +26,18 @@ class AppDocument extends Document {
 
     render() {
         return (
-            <html>
+            <html lang="ja">
                 <Head>
+                    <meta charSet="UTF-8" />
                     <title>MyPage</title>
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1"
                     />
-                    <meta name="description" content="Yuta Yamamoto is Frontend Developer."/>
+                    <meta
+                        name="description"
+                        content="Yuta Yamamoto is Frontend Developer."
+                    />
                     {this.props.styleTags}
                 </Head>
                 <body>
