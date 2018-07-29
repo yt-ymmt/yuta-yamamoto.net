@@ -24,8 +24,8 @@ const StyledAnchor = styled.a`
     align-items: center;
     margin: 0;
     padding: 0;
-    color: ${props => props.theme.color_link};
     text-decoration: none;
+    color: #fff;
     transition: all 0.3s ease;
     &:hover {
         text-decoration: underline;
