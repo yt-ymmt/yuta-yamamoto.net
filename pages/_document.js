@@ -32,6 +32,7 @@ class AppDocument extends Document {
                         name="viewport"
                         content="width=device-width, initial-scale=1"
                     />
+                    <meta name="description" content="Yuta Yamamoto is Frontend Developer."/>
                     {this.props.styleTags}
                 </Head>
                 <body>
