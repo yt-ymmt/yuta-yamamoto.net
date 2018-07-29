@@ -42,7 +42,7 @@ const SNSList = ({ snsItems, ...props }) => (
         {snsItems.map((snsItem, index) => (
             <StyledLi key={index}>
                 <Txt size="m">
-                    <StyledAnchor href={snsItem.url} target="_blank">
+                    <StyledAnchor href={snsItem.url} target="_blank" rel="noopener">
                         <StyledIcon
                             category={snsItem.iconCategory}
                             name={snsItem.iconName}
