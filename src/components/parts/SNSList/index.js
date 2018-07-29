@@ -2,7 +2,6 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import Icon from '../../atoms/Icon';
 import Txt from '../../atoms/Txt';
-import Anchor from '../../atoms/Anchor';
 
 const StyledUl = styled.ul`
     display: flex;
@@ -20,10 +19,17 @@ const StyledLi = styled.li`
     list-style: none;
 `;
 
-const StyledAnchor = styled(Anchor)`
+const StyledAnchor = styled.a`
     display: flex;
     align-items: center;
-    color: ${props => props.theme.color_white};
+    margin: 0;
+    padding: 0;
+    color: ${props => props.theme.color_link};
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 const StyledIcon = styled(Icon)`
