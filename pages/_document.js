@@ -38,6 +38,7 @@ class AppDocument extends Document {
                         name="description"
                         content="Yuta Yamamoto is Frontend Developer."
                     />
+                    <meta content="#333" name="theme-color" />
                     {this.props.styleTags}
                 </Head>
                 <body>
