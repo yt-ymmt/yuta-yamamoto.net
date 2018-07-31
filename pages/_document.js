@@ -29,7 +29,6 @@ class AppDocument extends Document {
             <html lang="ja">
                 <Head>
                     <meta charSet="UTF-8" />
-                    <title>MyPage</title>
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1"
@@ -38,8 +37,12 @@ class AppDocument extends Document {
                         name="description"
                         content="Yuta Yamamoto is Frontend Developer."
                     />
+                    <link rel="manifest" href="/static/manifest.json" />
                     <meta content="#333" name="theme-color" />
-                    <link rel="apple-touch-icon" href="/static/icons/icon-72x72.png" />
+                    <link
+                        rel="apple-touch-icon"
+                        href="/static/icons/icon-72x72.png"
+                    />
                     {this.props.styleTags}
                 </Head>
                 <body>
