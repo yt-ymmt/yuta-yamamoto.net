@@ -39,6 +39,7 @@ class AppDocument extends Document {
                         content="Yuta Yamamoto is Frontend Developer."
                     />
                     <meta content="#333" name="theme-color" />
+                    <link rel="apple-touch-icon" href="/static/icons/icon-72x72.png" />
                     {this.props.styleTags}
                 </Head>
                 <body>
