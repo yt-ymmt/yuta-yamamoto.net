@@ -4,6 +4,7 @@ module.exports = {
     webpack: config => {
         config.plugins.push(
             new SWPrecacheWebpackPlugin({
+                navigateFallback: '/',
                 verbose: true,
                 staticFileGlobsIgnorePatterns: [/\.next\//],
                 runtimeCaching: [
@@ -14,6 +15,7 @@ module.exports = {
                 ]
             })
         );
+
         return config;
     }
 };
