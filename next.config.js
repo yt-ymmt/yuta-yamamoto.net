@@ -9,8 +9,45 @@ module.exports = {
                 staticFileGlobsIgnorePatterns: [/\.next\//],
                 runtimeCaching: [
                     {
+                        urlPattern: '/',
                         handler: 'networkFirst',
-                        urlPattern: /^https?.*/
+                        options: {
+                            cacheName: 'page',
+                            cacheExpiration: {
+                                maxAgeSeconds: 60 * 60 * 24
+                            }
+                        }
+                    },
+                    {
+                        urlPattern: /\/api\/.+/,
+                        handler: 'networkFirst',
+                        options: {
+                            cacheName: 'api',
+                            cacheExpiration: {
+                                maxAgeSeconds: 60 * 60 * 24
+                            }
+                        }
+                    },
+                    {
+                        urlPattern: /\.(png|svg|woff|ttf|eot)/,
+                        handler: 'cacheFirst',
+                        options: {
+                            cacheName: 'assets',
+                            cacheExpiration: {
+                                maxAgeSeconds: 60 * 60 * 24 * 14
+                            }
+                        }
+                    },
+                    {
+                        urlPattern: /^https:\/\/yamamoto-yuta\.me\/\.static\/.*\.(jpeg|jpg)/,
+                        handler: 'cacheFirst',
+                        options: {
+                            cacheName: 'image-thumbnail',
+                            cacheExpiration: {
+                                maxEntries: 80,
+                                maxAgeSeconds: 60 * 60 * 24
+                            }
+                        }
                     }
                 ]
             })
