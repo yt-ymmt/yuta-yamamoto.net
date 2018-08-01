@@ -22,7 +22,7 @@ const textFactory = role => ({ size = 'm', ...props }) => {
             case 'l':
                 return 21;
             case 'm':
-                return 15;
+                return 16;
             case 's':
                 return 10;
             default:
