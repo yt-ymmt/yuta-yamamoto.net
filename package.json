@@ -13,7 +13,7 @@
         "build": "next build",
         "start": "next start",
         "export": "npm run build && next export && npm run copySW",
-        "copySW": " cp /.next/service-worker /out/static/serviceworker.js"
+        "copySW": " cp /.next/service-worker,js /out/static/service-worker.js"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
