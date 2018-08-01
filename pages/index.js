@@ -14,6 +14,22 @@ function mapDispatchToProps(dispatch) {
 }
 
 class IndexPage extends React.Component {
+    componentDidMount() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/static/service-worker.js')
+                .then(registration => {
+                    console.log('service worker registration successful');
+                })
+                .catch(err => {
+                    console.warn(
+                        'service worker registration failed',
+                        err.message
+                    );
+                });
+        }
+    }
+
     render() {
         return (
             <IndexTemplate
@@ -24,4 +40,7 @@ class IndexPage extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(IndexPage);

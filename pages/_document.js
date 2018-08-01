@@ -43,6 +43,7 @@ class AppDocument extends Document {
                         rel="apple-touch-icon"
                         href="/static/icons/icon-72x72.png"
                     />
+                    <link rel="favicon" href="/static/icons/icon-72x72.png" />
                     {this.props.styleTags}
                 </Head>
                 <body>
