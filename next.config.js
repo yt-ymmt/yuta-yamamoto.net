@@ -7,7 +7,7 @@ module.exports = {
             new WorkboxPlugin.GenerateSW({
                 cacheId: 'workbox',
                 globPatterns: ['**/*.{js,css}'],
-                swDest: '.next/service-worker.js',
+                swDest: 'service-worker.js',
                 skipWaiting: true,
                 clientsClaim: false,
                 runtimeCaching: [
