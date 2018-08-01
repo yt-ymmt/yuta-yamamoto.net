@@ -1,19 +1,22 @@
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+// const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     webpack: config => {
         config.plugins.push(
-            new SWPrecacheWebpackPlugin({
-                navigateFallback: '/',
-                verbose: true,
-                staticFileGlobsIgnorePatterns: [/\.next\//],
+            new WorkboxPlugin.GenerateSW({
+                cacheId: 'workbox',
+                globPatterns: ['**/*.{js,css}'],
+                swDest: '.next/service-worker.js',
+                skipWaiting: true,
+                clientsClaim: false,
                 runtimeCaching: [
                     {
                         urlPattern: '/',
                         handler: 'networkFirst',
                         options: {
                             cacheName: 'page',
-                            cacheExpiration: {
+                            expiration: {
                                 maxAgeSeconds: 60 * 60 * 24
                             }
                         }
@@ -23,7 +26,7 @@ module.exports = {
                         handler: 'networkFirst',
                         options: {
                             cacheName: 'api',
-                            cacheExpiration: {
+                            expiration: {
                                 maxAgeSeconds: 60 * 60 * 24
                             }
                         }
@@ -33,7 +36,7 @@ module.exports = {
                         handler: 'cacheFirst',
                         options: {
                             cacheName: 'assets',
-                            cacheExpiration: {
+                            expiration: {
                                 maxAgeSeconds: 60 * 60 * 24 * 14
                             }
                         }
@@ -43,7 +46,7 @@ module.exports = {
                         handler: 'cacheFirst',
                         options: {
                             cacheName: 'image-thumbnail',
-                            cacheExpiration: {
+                            expiration: {
                                 maxEntries: 80,
                                 maxAgeSeconds: 60 * 60 * 24
                             }
@@ -52,6 +55,56 @@ module.exports = {
                 ]
             })
         );
+        // config.plugins.push(
+        //     new SWPrecacheWebpackPlugin({
+        //         navigateFallback: '/',
+        //         verbose: true,
+        //         staticFileGlobsIgnorePatterns: [/\.next\//],
+        //         runtimeCaching: [
+        //             {
+        //                 urlPattern: '/',
+        //                 handler: 'networkFirst',
+        //                 options: {
+        //                     cacheName: 'page',
+        //                     cacheExpiration: {
+        //                         maxAgeSeconds: 60 * 60 * 24
+        //                     }
+        //                 }
+        //             },
+        //             {
+        //                 urlPattern: /\/api\/.+/,
+        //                 handler: 'networkFirst',
+        //                 options: {
+        //                     cacheName: 'api',
+        //                     cacheExpiration: {
+        //                         maxAgeSeconds: 60 * 60 * 24
+        //                     }
+        //                 }
+        //             },
+        //             {
+        //                 urlPattern: /\.(png|svg|woff|ttf|eot)/,
+        //                 handler: 'cacheFirst',
+        //                 options: {
+        //                     cacheName: 'assets',
+        //                     cacheExpiration: {
+        //                         maxAgeSeconds: 60 * 60 * 24 * 14
+        //                     }
+        //                 }
+        //             },
+        //             {
+        //                 urlPattern: /^https:\/\/yamamoto-yuta\.me\/\.static\/.*\.(jpeg|jpg)/,
+        //                 handler: 'cacheFirst',
+        //                 options: {
+        //                     cacheName: 'image-thumbnail',
+        //                     cacheExpiration: {
+        //                         maxEntries: 80,
+        //                         maxAgeSeconds: 60 * 60 * 24
+        //                     }
+        //                 }
+        //             }
+        //         ]
+        //     })
+        // );
 
         return config;
     }

@@ -13,7 +13,7 @@
         "build": "next build",
         "start": "next start",
         "export": "npm run build && next export && npm run copySW",
-        "copySW": " cp .next/service-worker.js out/static/service-worker.js"
+        "copySW": " cp .next/service-worker.js out/service-worker.js"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
@@ -49,6 +49,7 @@
         "prettier": "^1.13.7",
         "redux-logger": "^3.0.6",
         "webpack": "^4.16.0",
-        "webpack-cli": "^3.0.8"
+        "webpack-cli": "^3.0.8",
+        "workbox-webpack-plugin": "^3.4.1"
     }
 }
