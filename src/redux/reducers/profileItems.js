@@ -8,6 +8,10 @@ const initialState = [
         description: 'March, 12th, 1985'
     },
     {
+        term: 'Work',
+        description: '株式会社 Kaizen Platform'
+    },
+    {
         term: 'Location',
         description: 'Tokyo, Japan'
     }
