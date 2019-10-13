@@ -4,16 +4,20 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import theme from '../src/components/theme';
 import OfflineSupport from '../src/components/OfflineSupport';
 
-const GlobalStyle = createGlobalStyle`
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 0.16rem;
-    font-family: "YakuHanJP", "NotoSansCJKjp", "NotoSansCJKsc", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-* {
-    box-sizing: border-box;
-}`;
+const GlobalStyle = createGlobalStyle({
+    '*': {
+        margin: 0,
+        boxSizing: 'border-box'
+    },
+    'html, body': {
+        width: '100%',
+        height: '100%',
+        margin: 0,
+        padding: 0,
+        lineHeight: 1,
+        fontFamily: `"YakuHanJP", "NotoSansCJKjp", "NotoSansCJKsc", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`
+    }
+});
 
 class RootApp extends App {
     static async getInitialProps({ Component, ctx }: AppContext) {
