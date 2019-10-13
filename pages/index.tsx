@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ userAgent }) => (
-    <h1>Hello world! - user agent: {userAgent}</h1>
+    <h1>Hello world!!!!!! - user agent: {userAgent}</h1>
 );
 
 Home.getInitialProps = async ({ req }) => {
