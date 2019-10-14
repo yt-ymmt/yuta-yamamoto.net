@@ -1,8 +1,10 @@
 import App, { AppContext } from 'next/app';
 import React, { Fragment } from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import theme from '../src/components/theme';
-import OfflineSupport from '../src/components/OfflineSupport';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { createGlobalStyle } from 'styled-components';
+import theme from '../src/theme';
+import OfflineSupport from '../src/view/components/OfflineSupport';
+import { CssBaseline } from '@material-ui/core';
 
 const GlobalStyle = createGlobalStyle({
     '*': {
@@ -34,6 +36,7 @@ class RootApp extends App {
                 <GlobalStyle />
 
                 <ThemeProvider theme={theme}>
+                    <CssBaseline />
                     <Component {...pageProps} />
                 </ThemeProvider>
 

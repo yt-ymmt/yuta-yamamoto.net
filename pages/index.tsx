@@ -5,13 +5,14 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ userAgent }) => (
-    <h1>Hello world!!!!!! - user agent: {userAgent}</h1>
+    <h1>User agent: {userAgent}</h1>
 );
 
 Home.getInitialProps = async ({ req }) => {
     const userAgent = req
         ? req.headers['user-agent'] || ''
         : navigator.userAgent;
+
     return { userAgent };
 };
 
