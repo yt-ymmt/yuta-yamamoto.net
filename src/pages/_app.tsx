@@ -2,9 +2,9 @@ import App, { AppContext } from 'next/app';
 import React, { Fragment } from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createGlobalStyle } from 'styled-components';
-import theme from '../src/theme';
-import OfflineSupport from '../src/view/components/OfflineSupport';
+import OfflineSupport from '../view/components/OfflineSupport';
 import { CssBaseline } from '@material-ui/core';
+import theme from '../theme';
 
 const GlobalStyle = createGlobalStyle({
     '*': {
