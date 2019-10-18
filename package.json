@@ -44,7 +44,7 @@
         "babel-runtime": "7.0.0-beta.3",
         "eslint": "5.1.0",
         "eslint-config-prettier": "2.9.0",
-        "eslint-plugin-prettier": "2.6.2",
+        "eslint-plugin-prettier": "2.7.0",
         "eslint-plugin-react": "7.10.0",
         "prettier": "1.13.7",
         "typescript": "^3.6.4",
