@@ -50,6 +50,6 @@
         "typescript": "^3.6.4",
         "webpack": "4.16.5",
         "webpack-cli": "3.0.8",
-        "workbox-webpack-plugin": "3.4.1"
+        "workbox-webpack-plugin": "3.6.3"
     }
 }
