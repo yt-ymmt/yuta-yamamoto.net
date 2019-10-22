@@ -1,25 +1,11 @@
-import App, { AppContext } from 'next/app';
-import React, { Fragment } from 'react';
+import App, { AppContext, Container } from 'next/app';
+import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import OfflineSupport from '../view/components/OfflineSupport';
 import { CssBaseline } from '@material-ui/core';
 import theme from '../theme';
-
-const GlobalStyle = createGlobalStyle({
-    '*': {
-        margin: 0,
-        boxSizing: 'border-box'
-    },
-    'html, body': {
-        width: '100%',
-        height: '100%',
-        margin: 0,
-        padding: 0,
-        lineHeight: 1,
-        fontFamily: `"YakuHanJP", "NotoSansCJKjp", "NotoSansCJKsc", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`
-    }
-});
+import GlobalStyle from '../globalStyles';
 
 class RootApp extends App {
     static async getInitialProps({ Component, ctx }: AppContext) {
@@ -29,21 +15,34 @@ class RootApp extends App {
         }
         return { pageProps };
     }
+
+    componentDidMount() {
+        const jssStyles = document.querySelector('#jss-server-side');
+
+        if (jssStyles && jssStyles.parentNode) {
+            jssStyles.parentNode.removeChild(jssStyles);
+        }
+    }
+
     render() {
         const { Component, pageProps } = this.props;
-        return (
-            <Fragment>
-                <GlobalStyle />
 
+        return (
+            <Root>
                 <ThemeProvider theme={theme}>
                     <CssBaseline />
+                    <GlobalStyle />
                     <Component {...pageProps} />
                 </ThemeProvider>
-
                 <OfflineSupport />
-            </Fragment>
+            </Root>
         );
     }
 }
+
+const Root = styled('div')({
+    marginLeft: 240,
+    padding: 24
+});
 
 export default RootApp;

@@ -6,17 +6,19 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import GlobalNav from '../view/components/morecules/GlobalNav';
+import { ServerStyleSheets } from '@material-ui/core';
 
 class AppDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
         const sheet = new ServerStyleSheet();
+        const sheets = new ServerStyleSheets();
         const originalRenderPage = ctx.renderPage;
 
         try {
             ctx.renderPage = () =>
                 originalRenderPage({
                     enhanceApp: App => props =>
-                        sheet.collectStyles(<App {...props} />)
+                        sheet.collectStyles(sheets.collect(<App {...props} />))
                 });
 
             const initialProps = await Document.getInitialProps(ctx);
@@ -25,6 +27,7 @@ class AppDocument extends Document {
                 styles: (
                     <>
                         {initialProps.styles}
+                        {sheets.getStyleElement()}
                         {sheet.getStyleElement()}
                     </>
                 )
@@ -33,6 +36,7 @@ class AppDocument extends Document {
             sheet.seal();
         }
     }
+
     render() {
         return (
             <html lang="ja">
