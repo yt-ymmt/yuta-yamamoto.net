@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle({
         margin: 0,
         padding: 0,
         lineHeight: 1,
-        fontFamily: `"YakuHanJP", "NotoSansCJKjp", "NotoSansCJKsc", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`
+        fontFamily: `usual,'Yu Gothic',sans-serif`
     }
 });
 
