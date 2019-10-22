@@ -19,10 +19,8 @@ const rawTheme = createMuiTheme({
         }
     },
     typography: {
-        fontFamily: "'Work Sans', sans-serif",
+        fontFamily: `"YakuHanJP", "NotoSansCJKjp", "NotoSansCJKsc", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`,
         fontSize: 14,
-        fontWeightLight: 300, // Work Sans
-        fontWeightRegular: 400, // Work Sans
         fontWeightMedium: 700 // Roboto Condensed'
     }
 });
