@@ -19,8 +19,8 @@ const NameWithDescription: NextComponentType<{}, {}, Props> = ({
             2013 - 2018 / DMM GAMES : Front-end Developer, Sub Manager.<br />
             2018 - Now / Kaizen Platform, Inc. : Front-end Developer,
             Engineering Manager.<br />
-            I like Fighting Games, Delicious foods, Creative things, Human
-            growth.
+            Lang / JavaScript, TypeScript, Rust, Ocaml, etc<br />
+            Interest / Web, Creative things, Human growth, Fighting Games.
         </NameDescription>
     </Root>
 );
