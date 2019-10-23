@@ -11,7 +11,7 @@ module.exports = {
                 runtimeCaching: [
                     {
                         urlPattern: '/',
-                        handler: 'networkFirst',
+                        handler: 'NetworkFirst',
                         options: {
                             cacheName: 'page',
                             expiration: {
@@ -21,7 +21,7 @@ module.exports = {
                     },
                     {
                         urlPattern: /\/api\/.+/,
-                        handler: 'networkFirst',
+                        handler: 'NetworkFirst',
                         options: {
                             cacheName: 'api',
                             expiration: {
@@ -31,7 +31,7 @@ module.exports = {
                     },
                     {
                         urlPattern: /\.(png|svg|woff|ttf|eot)/,
-                        handler: 'cacheFirst',
+                        handler: 'CacheFirst',
                         options: {
                             cacheName: 'assets',
                             expiration: {
@@ -41,7 +41,7 @@ module.exports = {
                     },
                     {
                         urlPattern: /^https:\/\/yamamoto-yuta\.me\/\.static\/.*\.(jpeg|jpg)/,
-                        handler: 'cacheFirst',
+                        handler: 'CacheFirst',
                         options: {
                             cacheName: 'image-thumbnail',
                             expiration: {

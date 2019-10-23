@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import OfflineSupport from '../view/components/OfflineSupport';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, StylesProvider } from '@material-ui/core';
 import theme from '../theme';
 import GlobalStyle from '../globalStyles';
 
@@ -29,12 +29,14 @@ class RootApp extends App {
 
         return (
             <Root>
-                <ThemeProvider theme={theme}>
-                    <CssBaseline />
-                    <GlobalStyle />
-                    <Component {...pageProps} />
-                </ThemeProvider>
-                <OfflineSupport />
+                <StylesProvider injectFirst>
+                    <ThemeProvider theme={theme}>
+                        <CssBaseline />
+                        <GlobalStyle />
+                        <Component {...pageProps} />
+                    </ThemeProvider>
+                    <OfflineSupport />
+                </StylesProvider>
             </Root>
         );
     }
