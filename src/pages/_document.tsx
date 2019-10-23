@@ -5,7 +5,6 @@ import Document, {
     DocumentContext
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import GlobalNav from '../view/components/morecules/GlobalNav';
 import { ServerStyleSheets } from '@material-ui/core';
 
 class AppDocument extends Document {
@@ -46,20 +45,17 @@ class AppDocument extends Document {
                         name="viewport"
                         content="width=device-width, initial-scale=1"
                     />
-                    <meta
-                        name="description"
-                        content="Yuta Yamamoto is Frontend Developer."
-                    />
-                    <link rel="manifest" href="/static/manifest.json" />
+                    <meta name="description" content="I am a Yuta Yamamoto" />
                     <meta content="#333" name="theme-color" />
+                    <link rel="manifest" href="/manifest.json" />
+                    <link rel="apple-touch-icon" href="icons/icon-72x72.png" />
+                    <link rel="favicon" href="icons/icon-72x72.png" />
                     <link
-                        rel="apple-touch-icon"
-                        href="/static/icons/icon-72x72.png"
+                        href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+                        rel="stylesheet"
                     />
-                    <link rel="favicon" href="/static/icons/icon-72x72.png" />
                 </Head>
                 <body>
-                    <GlobalNav />
                     <Main />
                     <NextScript />
                 </body>

@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle({
         margin: 0,
         padding: 0,
         lineHeight: 1,
-        fontFamily: `usual,'Yu Gothic',sans-serif`
+        fontFamily: `usual, 'Noto Sans', 'Yu Gothic', sans-serif`
     }
 });
 

@@ -1,4 +1,4 @@
-import App, { AppContext, Container } from 'next/app';
+import App, { AppContext } from 'next/app';
 import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import styled from 'styled-components';
@@ -19,8 +19,8 @@ class RootApp extends App {
     componentDidMount() {
         const jssStyles = document.querySelector('#jss-server-side');
 
-        if (jssStyles && jssStyles.parentNode) {
-            jssStyles.parentNode.removeChild(jssStyles);
+        if (jssStyles) {
+            jssStyles.parentNode!.removeChild(jssStyles);
         }
     }
 
@@ -43,7 +43,6 @@ class RootApp extends App {
 }
 
 const Root = styled('div')({
-    marginLeft: 240,
     padding: 24
 });
 
