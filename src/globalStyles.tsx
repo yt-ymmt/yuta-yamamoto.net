@@ -24,6 +24,12 @@ const GlobalStyle = createGlobalStyle({
         margin: 0,
         padding: 0,
         listStyleType: 'none'
+    },
+    a: {
+        color: 'inherit'
+    },
+    'a:hover': {
+        textDecoration: 'none'
     }
 });
 
