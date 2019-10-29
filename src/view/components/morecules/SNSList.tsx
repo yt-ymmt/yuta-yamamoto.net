@@ -47,25 +47,28 @@ const SNSList: NextComponentType<{}, {}, Props> = ({ className }) => (
                 </a>
             </Link>
         </Item>
-        {/* <Link href="https://github.com/yt-ymmt">
-            <a target="_blank">
-                <ServiceIconWithName
-                    src="/icons/dev-dot-to.svg"
-                    name="dev.to"
-                />
-            </a>
-        </Link> */}
+        <Item>
+            <Link href="https://dev.to/yuta_yamamoto">
+                <a target="_blank">
+                    <ServiceIconWithName
+                        src="/icons/dev-dot-to.svg"
+                        name="dev.to"
+                    />
+                </a>
+            </Link>
+        </Item>
     </Root>
 );
 
 const Root = styled('ul')(
     flexibleLayoutContainer({
-        alignItems: 'center'
+        alignItems: 'center',
+        wrap: 'wrap'
     })
 );
 
 const Item = styled('li')({
-    marginRight: 16
+    margin: '0 16px 16px 0'
 });
 
 export default SNSList;
