@@ -2361,10 +2361,10 @@
   resolved "https://registry.yarnpkg.com/@types/is-function/-/is-function-1.0.0.tgz#1b0b819b1636c7baf0d6785d030d12edf70c3e83"
   integrity sha512-iTs9HReBu7evG77Q4EC8hZnqRt57irBDkK9nvmHroiOIVwYMQc4IvYvdRgwKfYepunIY7Oh/dBuuld+Gj9uo6w==
 
-"@types/node@12.12.22":
-  version "12.12.22"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.22.tgz#b8d9eae3328b96910a373cf06ac8d3c5abe9c200"
-  integrity sha512-r5i93jqbPWGXYXxianGATOxTelkp6ih/U0WVnvaqAvTqM+0U6J3kw6Xk6uq/dWNRkEVw/0SLcO5ORXbVNz4FMQ==
+"@types/node@12.12.23":
+  version "12.12.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.23.tgz#e82e3b4dca7e840b53ebbefd3a0f3d4ddfc332fa"
+  integrity sha512-mHScXQHFSGNmJQq8O3nQMUA8IBtRxXCwBlSpxaPRFaSsFl7HxNuk569j6WUzjcud6Ew5LIHhuGQ/kAH7J0E7zA==
 
 "@types/prop-types@*":
   version "15.7.3"
