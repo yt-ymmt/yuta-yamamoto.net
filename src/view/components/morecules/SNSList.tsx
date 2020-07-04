@@ -15,7 +15,7 @@ const SNSList: NextComponentType<
 > = ({ className }) => (
     <Root className={className}>
         <Item>
-            <Link href="https://github.com/yt-ymmt">
+            <Link href="//github.com/yt-ymmt">
                 <a target="_blank">
                     <ServiceIconWithName
                         src="/icons/github.svg"
@@ -25,7 +25,7 @@ const SNSList: NextComponentType<
             </Link>
         </Item>
         <Item>
-            <Link href="https://twitter.com/YtYmmt">
+            <Link href="//twitter.com/YtYmmt">
                 <a target="_blank">
                     <ServiceIconWithName
                         src="/icons/twitter.svg"
@@ -35,14 +35,14 @@ const SNSList: NextComponentType<
             </Link>
         </Item>
         <Item>
-            <Link href="https://qiita.com/Yuta_Yamamoto">
+            <Link href="//qiita.com/Yuta_Yamamoto">
                 <a target="_blank">
                     <ServiceIconWithName src="/icons/qiita.svg" name="Qiita" />
                 </a>
             </Link>
         </Item>
         <Item>
-            <Link href="https://yuta-yamamoto.hatenablog.com">
+            <Link href="//yuta-yamamoto.hatenablog.com">
                 <a target="_blank">
                     <ServiceIconWithName
                         src="/icons/hatenablog.svg"
@@ -52,7 +52,7 @@ const SNSList: NextComponentType<
             </Link>
         </Item>
         <Item>
-            <Link href="https://dev.to/yuta_yamamoto">
+            <Link href="//dev.to/yuta_yamamoto">
                 <a target="_blank">
                     <ServiceIconWithName
                         src="/icons/dev-dot-to.svg"

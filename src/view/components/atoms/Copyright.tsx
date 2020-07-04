@@ -12,9 +12,7 @@ const Copyright: NextComponentType<
     Props
 > = ({ className }) => (
     <Root className={className}>
-        <Typography variant="body2">
-            © 2019 yuta.yamamoto.dev All Rights Reserved.
-        </Typography>
+        <Typography variant="body2">© yuta.yamamoto.dev.</Typography>
     </Root>
 );
 
