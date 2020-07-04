@@ -10,16 +10,20 @@ const NameWithDescription: NextComponentType<{}, {}, Props> = ({
     className
 }) => (
     <Root className={className}>
-        <MyName variant="h6" component="h3">
+        <MyName variant="h6">
             Yuta Yamamoto <br />
-            Born in 1985. Living in Tokyo.<br />
+            Born in 1985. Living in Tokyo.
+            <br />
             Front-end Developer and Engineering Manager.
         </MyName>
         <NameDescription variant="body2">
-            2013 - 2018 / DMM GAMES : Front-end Developer, Sub Manager.<br />
+            2013 - 2018 / DMM GAMES : Front-end Developer, Sub Manager.
+            <br />
             2018 - Now / Kaizen Platform, Inc. : Front-end Developer,
-            Engineering Manager.<br />
-            Lang / JavaScript, TypeScript, Rust, Ocaml, etc<br />
+            Engineering Manager.
+            <br />
+            Lang / JavaScript, TypeScript, Rust, Ocaml, etc
+            <br />
             Interest / Web, Creative things, Human growth, Fighting Games.
         </NameDescription>
     </Root>

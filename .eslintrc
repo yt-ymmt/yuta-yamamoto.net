@@ -1,28 +1,43 @@
 {
     "env": {
         "browser": true,
-        "node": true,
-        "es6": true,
-        "jest/globals": true
+        "es6": true
     },
-    "parser": "babel-eslint",
-    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
-    "plugins": ["react", "jest"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint",
+        "prettier/react"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
         "ecmaFeatures": {
-            "jsx": true,
-            "experimentalObjectRestSpread": true
-        }
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
     },
+    "plugins": ["react", "@typescript-eslint"],
     "rules": {
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "jest/no-disabled-tests": "warn",
-        "jest/no-focused-tests": "error",
-        "jest/no-identical-title": "error",
-        "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error"
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "no-useless-catch": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-var-requires": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
