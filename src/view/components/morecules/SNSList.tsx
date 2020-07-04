@@ -8,7 +8,11 @@ type Props = {
     className?: string;
 };
 
-const SNSList: NextComponentType<{}, {}, Props> = ({ className }) => (
+const SNSList: NextComponentType<
+    Record<string, unknown>,
+    Record<string, unknown>,
+    Props
+> = ({ className }) => (
     <Root className={className}>
         <Item>
             <Link href="https://github.com/yt-ymmt">

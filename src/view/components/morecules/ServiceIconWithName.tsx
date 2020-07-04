@@ -9,11 +9,11 @@ type Props = {
     className?: string;
 };
 
-const ServiceIconWithName: NextComponentType<{}, {}, Props> = ({
-    src,
-    name,
-    className
-}) => (
+const ServiceIconWithName: NextComponentType<
+    Record<string, unknown>,
+    Record<string, unknown>,
+    Props
+> = ({ src, name, className }) => (
     <Root>
         <Icon src={src} className={className} />
         <Typography variant="body2">{name}</Typography>

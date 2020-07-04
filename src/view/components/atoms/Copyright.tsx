@@ -6,7 +6,11 @@ type Props = {
     className?: string;
 };
 
-const Copyright: NextComponentType<{}, {}, Props> = ({ className }) => (
+const Copyright: NextComponentType<
+    Record<string, unknown>,
+    Record<string, unknown>,
+    Props
+> = ({ className }) => (
     <Root className={className}>
         <Typography variant="body2">
             © 2019 yuta.yamamoto.dev All Rights Reserved.

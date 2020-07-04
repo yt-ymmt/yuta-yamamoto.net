@@ -6,9 +6,11 @@ type Props = {
     className?: string;
 };
 
-const NameWithDescription: NextComponentType<{}, {}, Props> = ({
-    className
-}) => (
+const NameWithDescription: NextComponentType<
+    Record<string, unknown>,
+    Record<string, unknown>,
+    Props
+> = ({ className }) => (
     <Root className={className}>
         <MyName variant="h6">
             Yuta Yamamoto <br />
