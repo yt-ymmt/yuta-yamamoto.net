@@ -32,7 +32,7 @@
         "@storybook/addon-notes": "5.3.19",
         "@storybook/addon-storysource": "5.3.19",
         "@storybook/react": "5.3.19",
-        "@types/node": "12.12.47",
+        "@types/node": "12.12.70",
         "@types/react": "16.9.41",
         "@types/styled-components": "5.1.0",
         "@typescript-eslint/eslint-plugin": "3.5.0",
